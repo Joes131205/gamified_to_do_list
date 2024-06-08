@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gamified To-Do List</title>
+        <script defer src="index.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="section section__hero">
+            <p class="section__hero--greeting">Hello, <span>User!</span></p>
+            <div class="section__hero--date">
+                <p class="hero--time"></p>
+                <p class="hero--date"></p>
+            </div>
+            <div class="section__hero--weather">
+                <img alt="Weather Icon" class="hero__weather--icon" />
+                <p class="hero__weather--main"></p>
+                <p class="hero__weather--description"></p>
+                <p class="hero__weather--temp"></p>
+            </div>
+        </div>
+        <div class="section section__list">
+            <h2>Here are the task for today</h2>
+            <form class="section__list--form">
+                <input type="text" placeholder="Add new task" id="input" />
+                <select id="type">
+                    <option value="once">Do once</option>
+                    <option value="repeat">Repeating / Incremental</option>
+                </select>
+                <select id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+                <button class="btn btn--input">Add Task</button>
+            </form>
+            <ul class="section__list--container"></ul>
+        </div>
+        <div class="section section__shop">
+            <div>
+                <h2>Shop</h2>
+                <p>
+                    Your money: <b><span id="shop--money">0$</span></b>
+                </p>
+            </div>
+            <ul class="section__shop--container"></ul>
+        </div>
+    </body>
+</html>

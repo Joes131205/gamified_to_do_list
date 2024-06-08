@@ -1,0 +1,310 @@
+:root {
+    --background: #212121; /* Primary Background Color */
+    --secondary-background: #333333; /* Secondary Background Color */
+    --text: #ffffff; /* Primary Text Color */
+    --secondary-text: #6c6f7a; /* Secondary Text Color */
+    --accent: #61e265; /* Accent Color */
+    --accent-hover: #89ff8d;
+    --error: #ff5252; /* Error Color */
+    --hover: #545454; /* Background Hover Color */
+}
+* {
+    font-family: "Open Sans", sans-serif;
+}
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+.section__hero--greeting {
+    text-align: center;
+    font-size: x-large;
+    max-width: 12rem;
+}
+.section__hero--weather {
+    font-size: 20px;
+    max-width: 15rem;
+}
+.section__hero {
+    display: flex;
+    gap: 5px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bolder;
+}
+.hero--time {
+    font-size: 50px;
+}
+.hero--date {
+    font-size: 25px;
+}
+.section__list--container {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+.section__list--form {
+    display: flex;
+    gap: 2rem;
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 1rem 1.5rem;
+    background-color: var(--secondary-background);
+    box-shadow: 0 0 5px 2px var(--secondary-background);
+    transition: opacity 0.5s, text-decoration 0.5s;
+}
+.list__button {
+    background-color: var(--accent);
+    padding: 0.7rem 1.5rem;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+.hero__weather--icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -20px;
+}
+.list__button:hover {
+    background-color: var(--accent-hover);
+    transition: 0.5s;
+}
+.list--delete {
+    color: var(--text);
+    background-color: #ff0000;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+.list--delete:hover {
+    background-color: #970000;
+    transition: 0.5s;
+}
+.list--once {
+    border-top: 5px solid rgb(0, 165, 36);
+}
+.list--repeat {
+    border-top: 5px solid rgb(30, 109, 34);
+}
+.list__easy {
+    border-left: 5px solid rgb(0, 255, 0);
+}
+.list__medium {
+    border-left: 5px solid rgb(255, 255, 0);
+}
+.list__hard {
+    border-left: 5px solid rgb(255, 0, 0);
+}
+.completed {
+    color: var(--secondary-text);
+    opacity: 0.5;
+    transition: opacity 0.5s, text-decoration 0.5s;
+}
+.completed .list--task {
+    text-decoration: line-through;
+    transition: opacity 0.5s, text-decoration 0.5s; /* Add transition */
+}
+.completed .list__button {
+    pointer-events: none;
+    background: gray;
+}
+
+.item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    background-color: var(--secondary-background);
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px var(--secondary-background);
+}
+
+.list > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#points-container {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    background-color: var(--secondary-background);
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px var(--secondary-background);
+    width: 250px;
+    margin: 1rem;
+}
+.section__shop--container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.shop--button {
+    background-color: var(--accent);
+    padding: 0.7rem 1.5rem;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+.shop--button:hover {
+    background-color: var(--accent-hover);
+    transition: 0.5s;
+}
+.description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.section__list--container {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__list--form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section__list--form input[type="text"] {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.section__list--form input[type="text"]::placeholder {
+    color: #999;
+}
+
+.section__list--form select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+.section__list--form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--accent);
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+
+.section__list--form button:hover {
+    background-color: var(--accent-hover);
+    transition: 0.5s;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    /* Hero section */
+    .section__hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__hero--greeting {
+        font-size: 1.2rem;
+    }
+    .section__hero--date {
+        margin-top: 1rem;
+    }
+    .hero__weather--icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* List section */
+    .section__list--form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__list--form input[type="text"] {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .section__list--form select {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .section__list--form button {
+        width: 100%;
+    }
+    .section__list--container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Shop section */
+    .section__shop--container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* General styles */
+    .section {
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
